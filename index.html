@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos e Links</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Botõezinhos de idioma bem no topo! -->
+        <div class="lang-switch">
+            <button class="lang-btn active" data-lang="pt">PT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <header class="profile-section">
+            <div class="profile-pic">
+                <!-- Coloque a url da sua imagem no src abaixo -->
+                <img src="./img/Kimito.jpg" alt="Minha Foto">
+            </div>
+            <h1>Seu Nome Aqui</h1>
+            <p data-i18n="role">Desenvolvedor Front-end & Criador de Ferramentas</p>
+            <p class="email" id="user-email">siteforgeagp@gmail.com</p>
+        </header>
+
+        <section class="social-section">
+            <div class="social-icons">
+                <a href="#" class="icon-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon-btn" title="Ko-fi"><i class="fa-solid fa-mug-hot"></i></a>
+                <a href="#" class="icon-btn" title="Bluesky"><i class="fa-brands fa-bluesky"></i></a>
+                <a href="#" class="icon-btn" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="icon-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <h2 data-i18n="projectsTitle">Meus Projetos</h2>
+            
+            <div class="project-card">
+                <h3>Missão Épica</h3>
+                <p data-i18n="proj1Desc">Aplicativo gamificado para rastreamento de hábitos e missões de guilda, com timers e títulos de recompensa.</p>
+                <a href="#" class="project-link" data-i18n="viewProject" target="_blank">Explorar Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Rastreador de Iniciativa D&D</h3>
+                <p data-i18n="proj2Desc">Ferramenta digital de combate para RPG de mesa, controle de HP, efeitos de status e rolagem de dados.</p>
+                <a href="#" class="project-link" data-i18n="viewProject" target="_blank">Explorar Projeto</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Markdown Link Extractor</h3>
+                <p data-i18n="proj3Desc">Extensão de navegador para extrair, formatar e destacar links da web diretamente em Markdown.</p>
+                <a href="#" class="project-link" data-i18n="viewProject" target="_blank">Explorar Projeto</a>
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2 data-i18n="supportTitle">Apoie meu trabalho</h2>
+            
+            <!-- Grupo de pagamento para os Brasileiros (PT) -->
+            <div id="support-pt" class="support-group">
+                <button id="pix-btn" class="pix-btn">✨ Fazer uma doação via Pix</button>
+                
+                <!-- Gavetinha secreta do Pix -->
+                <div id="pix-details" class="pix-details hidden">
+                    <p>Escaneie o QR Code ou copie a chave!</p>
+                    <img src="https://via.placeholder.com/150" alt="QR Code Pix" class="qr-code">
+                    <p class="pix-key-text">Chave: <strong id="pix-key">siteforgeagp@gmail.com</strong></p>
+                    <button id="copy-pix-btn" class="copy-btn">Copiar Chave Pix</button>
+                </div>
+            </div>
+
+            <!-- Grupo de pagamento para os Gringos (EN) -->
+            <div id="support-en" class="support-group hidden">
+                <a href="#" class="support-link-btn bmc-btn" target="_blank"><i class="fa-solid fa-mug-hot"></i> Buy Me a Coffee</a>
+                <a href="#" class="support-link-btn kofi-btn" target="_blank"><i class="fa-solid fa-heart"></i> Support on Ko-fi</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
