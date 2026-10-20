@@ -8,7 +8,7 @@ const translations = {
         proj3Desc: "Extensão de navegador para extrair, formatar e destacar links da web diretamente em Markdown.",
         viewProject: "Explorar Projeto",
         supportTitle: "Apoie meu trabalho",
-        emailCopied: "Email copiado! Nyeh!",
+        emailCopied: "Email copiado!",
         copyPixSuccess: "Chave Pix copiada!"
     },
     en: {
@@ -19,7 +19,7 @@ const translations = {
         proj3Desc: "Browser extension to extract, format, and highlight web links directly in Markdown.",
         viewProject: "Explore Project",
         supportTitle: "Support my work",
-        emailCopied: "Email copied! Nyeh!",
+        emailCopied: "Email copied!",
         copyPixSuccess: "Pix Key copied!"
     }
 };
