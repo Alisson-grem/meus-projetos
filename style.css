@@ -12,6 +12,7 @@ body {
     justify-content: center;
     padding: 2rem 1rem;
     position: relative;
+    min-height: 100vh;
 }
 
 .container {
@@ -68,12 +69,14 @@ body {
     border: 4px solid #bb86fc;
     margin-bottom: 1rem;
     object-fit: cover;
+    transition: all 0.3s ease;
 }
 
 .profile-section h1 {
     font-size: 1.8rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .profile-section p {
@@ -191,7 +194,6 @@ h2 {
     padding-top: 2rem;
 }
 
-/* Utilitário mágico de invisibilidade */
 .hidden {
     display: none !important;
 }
@@ -202,7 +204,6 @@ h2 {
     gap: 1rem;
 }
 
-/* O feitiço de pulsar o botão do Pix */
 .pix-btn {
     width: 100%;
     padding: 1rem;
@@ -230,7 +231,6 @@ h2 {
     100% { box-shadow: 0 0 0 0 rgba(3, 218, 198, 0); }
 }
 
-/* Gaveta do Pix */
 .pix-details {
     background-color: #252525;
     padding: 1.5rem;
@@ -251,6 +251,7 @@ h2 {
 .pix-key-text {
     font-size: 0.9rem;
     color: #b0b0b0;
+    word-break: break-all; /* Pra chaves muito grandes não quebrarem a tela do celular */
 }
 
 .pix-key-text strong {
@@ -273,7 +274,6 @@ h2 {
     color: #121212;
 }
 
-/* Botões Gringos (Ko-fi e BMC) */
 .support-link-btn {
     display: flex;
     align-items: center;
@@ -310,4 +310,54 @@ h2 {
 .kofi-btn:hover {
     background-color: #e55452;
     box-shadow: 0 4px 15px rgba(255, 94, 91, 0.3);
+}
+
+/* =========================================
+   A MAGIA DO MEDIA QUERY DA SIPAH AQUI!
+   ========================================= */
+@media (max-width: 480px) {
+    body {
+        padding: 1rem 0.5rem; /* Menos margem nas bordas da tela */
+    }
+
+    .container {
+        padding: 3rem 1.5rem 1.5rem 1.5rem; /* Ajuste no acolchoamento do container */
+    }
+
+    .profile-pic img {
+        width: 100px;  /* Foto um tiquinho menor */
+        height: 100px;
+    }
+
+    .profile-section h1 {
+        font-size: 1.5rem; /* Nome um pouquinho menor */
+    }
+
+    .social-icons {
+        gap: 0.8rem; /* Ícones mais juntinhos */
+    }
+
+    .icon-btn {
+        width: 40px; /* Ícones menores pros dedões apertarem */
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .project-card {
+        padding: 1.2rem; /* Cartões de projetos mais enxutos */
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .pix-btn, .support-link-btn {
+        font-size: 1rem; /* Textos dos botões de pagamento menores */
+        padding: 0.8rem;
+    }
+
+    .qr-code {
+        width: 120px; /* QR code menorzinho pro celular */
+        height: 120px;
+    }
 }
